@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheus Pompei | Desenvolvedor Front-End</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0f172a;
+            color: #f1f5f9;
+        }
+
+        /* HERO */
+        header {
+            padding: 140px 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        header h1 {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+
+        .highlight {
+            color: #38bdf8;
+        }
+
+        header p {
+            font-size: 22px;
+            margin-top: 20px;
+            color: #94a3b8;
+            max-width: 600px;
+        }
+
+        .button-group {
+            margin-top: 35px;
+        }
+
+        button {
+            padding: 14px 32px;
+            border-radius: 30px;
+            border: none;
+            background: #38bdf8;
+            color: #0f172a;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-right: 15px;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(56,189,248,0.4);
+        }
+
+        .secondary {
+            background: transparent;
+            border: 2px solid #38bdf8;
+            color: #38bdf8;
+        }
+
+        .secondary:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 10%;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        /* SOBRE */
+        .about {
+            max-width: 700px;
+            color: #cbd5e1;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* STATS */
+        .stats {
+            display: flex;
+            gap: 60px;
+            margin-top: 50px;
+        }
+
+        .stat h3 {
+            font-size: 40px;
+            color: #38bdf8;
+        }
+
+        .stat p {
+            color: #94a3b8;
+        }
+
+        /* CARDS */
+        .card {
+            background: #1e293b;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* SKILLS */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 25px;
+        }
+
+        .skill {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-6px);
+            background: #334155;
+        }
+
+        .skill img {
+            width: 40px;
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #020617;
+            color: #64748b;
+        }
+
+        /* RESPONSIVO */
+        @media(max-width: 768px) {
+            header h1 {
+                font-size: 42px;
+            }
+            .stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Olá, eu sou <span class="highlight">Matheus Pompei</span></h1>
+        <p>Desenvolvedor Front-End focado em criar interfaces modernas, intuitivas e performáticas utilizando React e tecnologias atuais.</p>
+
+        <div class="button-group">
+            <button onclick="mostrarContato()">Entrar em Contato</button>
+            <button class="secondary" onclick="irLinkedin()">LinkedIn</button>
+        </div>
+
+        <p id="contato" style="display:none; margin-top:20px; color:#94a3b8;">
+            📱 (11) 96550-4631 <br>
+            📧 matheus.pompei7@gmail.com <br>
+            📍 São Paulo
+        </p>
+    </header>
+
+    <section>
+        <h2>Sobre Mim</h2>
+        <div class="about">
+            Sou estudante de Análise e Desenvolvimento de Sistemas e apaixonado por desenvolvimento front-end.
+            Tenho experiência na criação de interfaces responsivas, integração com banco de dados e prototipação
+            de soluções focadas na experiência do usuário.
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <h3>3+</h3>
+                <p>Projetos Desenvolvidos</p>
+            </div>
+            <div class="stat">
+                <h3>2+</h3>
+                <p>Anos de Estudo</p>
+            </div>
+            <div class="stat">
+                <h3>100%</h3>
+                <p>Foco em Evolução</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Formação</h2>
+        <div class="card">
+            <strong>Ensino Médio Técnico em Multimídia</strong><br>
+            SENAC (2023 - 2025)<br><br>
+            Formação técnica com foco em design digital, produção multimídia,
+            desenvolvimento web e fundamentos de programação.
+        </div>
+        <div class="card">
+            <strong>Análise e Desenvolvimento de Sistemas</strong><br>
+            SENAC (2026 - 2028)<br><br>
+            Graduação voltada para desenvolvimento de software, banco de dados,
+            engenharia de requisitos e boas práticas de programação.
+        </div>
+    </section>
+
+    <section>
+        <h2>Projetos</h2>
+        <div class="card">
+            <strong>FAST PAY</strong><br><br>
+            Plataforma de carteira de criptomoeda desenvolvida com React e Supabase,
+            focada em segurança, performance e experiência do usuário.
+        </div>
+        <div class="card">
+            <strong>GAME ONLINE</strong><br><br>
+            Aplicação com melhoria de interface e integração com banco de dados SQL,
+            garantindo melhor organização e fluxo de dados.
+        </div>
+        <div class="card">
+            <strong>SECURITY PAY</strong><br><br>
+            Projeto criado no Empreenda SENAC com foco em design no Figma e
+            implementação com React.
+        </div>
+    </section>
+
+    <section>
+        <h2>Habilidades</h2>
+        <div class="skills">
+            <div class="skill"><img src="img/react.png"><p>React</p></div>
+            <div class="skill"><img src="img/javascript.png"><p>JavaScript</p></div>
+            <div class="skill"><img src="img/html.png"><p>HTML5</p></div>
+            <div class="skill"><img src="img/css.png"><p>CSS3</p></div>
+            <div class="skill"><img src="img/sql.png"><p>SQL</p></div>
+            <div class="skill"><img src="img/figma.png"><p>Figma</p></div>
+            <div class="skill"><img src="img/java.jpg"><p>Java</p></div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Matheus Pompei • Desenvolvedor Front-End
+    </footer>
+
+    <script>
+        function mostrarContato() {
+            const contato = document.getElementById("contato");
+            contato.style.display = contato.style.display === "none" ? "block" : "none";
+        }
+
+        function irLinkedin() {
+            window.open("https://www.linkedin.com/in/matheus-pompei", "_blank");
+        }
+    </script>
+</body>
+</html>
