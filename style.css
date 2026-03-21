@@ -131,31 +131,42 @@ nav a:hover {
 
 button {
   padding: 12px 28px;
-  border-radius: 30px;
-  border: none;
+  border-radius: 12px; /* Menos arredondado é a tendência atual */
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background: var(--accent);
   color: #0f172a;
   font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Transição mais natural */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px -5px var(--accent);
 }
 
 .secondary {
-  background: transparent;
-  border: 2px solid var(--accent);
+  background: rgba(
+    56,
+    189,
+    248,
+    0.05
+  ); /* Um fundo sutil para não parecer vazio */
+  border: 1px solid var(--accent);
   color: var(--accent);
+  backdrop-filter: blur(4px);
 }
 
 .secondary:hover {
   background: var(--accent);
   color: #0f172a;
 }
-
 /* SEÇÕES */
 section {
   padding: 80px 10%;
